@@ -15,7 +15,7 @@ int bin_uncode(long long binary){
     return sum;
 }
 
-void bin_to_text(const char *entry, char *out){
+void code_to_text(const char *entry, char *out){
     char copy[200];
     strcpy(copy, entry);
 
@@ -36,7 +36,7 @@ int main(){
     char output[200];
 
     fgets(input, sizeof(input), stdin);
-    bin_to_text(input, output);
+    code_to_text(input, output);
 
     printf("%s\n", output);
 }
