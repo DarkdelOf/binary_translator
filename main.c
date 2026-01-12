@@ -1,3 +1,6 @@
+// version 0.0.3
+// 1= release; 2= mark; 3= commit.
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
