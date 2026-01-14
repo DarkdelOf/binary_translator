@@ -18,6 +18,22 @@ int bin_uncode(long long binary){
     return sum;
 }
 
+void bin_encode(char *input, char *output) {
+    int tam = strlen(input), temp, i, j, k = 0;
+
+    for(i=0; i<tam; i++) {
+        for(j=7; j>=0; j--) {
+            temp = (input[i] >> j) & 1; //calculo do bit 0 ou 1
+            output[k] = temp + '0'; //transforma o numero em caractere
+            k++;
+        }
+        output[k] = ' '; //espaço entre as letras pra facilitar leitura
+        k++;
+    }
+
+    output[k] = '\0';
+}
+
 void code_to_text(const char *entry, char *out){
     char copy[200];
     strcpy(copy, entry);
@@ -36,7 +52,7 @@ void code_to_text(const char *entry, char *out){
 
 int main(){
     char input[200];
-    char output[200];
+    char output[1600];
 
     fgets(input, sizeof(input), stdin);
     code_to_text(input, output);
