@@ -1,25 +1,27 @@
 @echo off
-set SOURCE=main.c
+setlocal
+
+set SOURCES=main.c src/bintext.c
 set OUTPUT=programa.exe
+set INCLUDES=-Iinclude
 
 cls
 echo [COMPILANDO]...
 
-gcc %SOURCE% -o %OUTPUT% -std=c99 -Wall -Wextra -pedantic -Werror
+gcc %SOURCES% %INCLUDES% -o %OUTPUT% -std=c99 -Wall -Wextra -pedantic -Werror
 
-
-if %errorlevel% neq 0 (
+if errorlevel 1 (
     echo.
     echo [ERRO] Falha na compilacao.
     pause
-    exit /b
+    exit /b 1
 )
 
 echo.
 echo [SUCESSO] Executando programa...
 echo.
 
-.\%OUTPUT%
+%OUTPUT%
 
 echo.
 pause
