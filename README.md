@@ -1,18 +1,57 @@
-# bintext
+# 010101 bintext
 
-Biblioteca em C para conversão entre bytes e sua representação binária textual.
+![Language](https://img.shields.io/badge/language-C-blue?style=for-the-badge&logo=c)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
 
-## Funcionalidades
-**bin_encode**: Conversão de bytes → representação binária textual
+> **Biblioteca em C para conversão eficiente entre bytes e sua representação binária textual.**
 
-**bin_decode**: Conversão de representação binária textual → valor numérico de bytes baseado no enconding do ambiente
+A `bintext` é uma ferramenta focada na manipulação de strings para tradução de dados brutos em representações legíveis de binário e vice-versa.
 
-**bin_to_text**: Conversão de valor numerico (bytes) → texto
-- Parser tolerante a caracteres inválidos
+## 💻 Desenvolvido por
 
-## Observações
-- A interpretação de caracteres depende do encoding do ambiente
-- A biblioteca não é focada em otimização e sim no processo com strings, é um processo baseado em texto → texto
+[![DarkdelOf](https://img.shields.io/badge/GitHub-DarkdelOf-181717?style=for-the-badge&logo=github)](https://github.com/DarkdelOf)
+[![vvvvvdal](https://img.shields.io/badge/GitHub-vvvvvdal-181717?style=for-the-badge&logo=github)](https://github.com/vvvvvdal)
+[![plusfrapp](https://img.shields.io/badge/GitHub-plusfrapp-181717?style=for-the-badge&logo=github)](https://github.com/plusfrapp)
 
-## Licença
-**MIT**
+## 📋 Funcionalidades
+
+A biblioteca oferece três funções principais para manipulação de dados:
+
+### 🔄 Conversão e Codificação
+- **`bin_encode`**
+  - Converte **Bytes** $\rightarrow$ **Representação Binária Textual**.
+  - *Exemplo:* Transforma o byte `A` na string `"01000001"`.
+
+- **`bin_decode`**
+  - Converte **Representação Binária Textual** $\rightarrow$ **Valor Numérico (Bytes)**.
+  - Baseado no encoding do ambiente atual.
+
+- **`bin_to_text`**
+  - Converte **Valor Numérico (Bytes)** $\rightarrow$ **Texto Legível**.
+  - Inclui um **parser tolerante** que lida com caracteres inválidos sem quebrar a execução.
+
+---
+
+## ⚠️ Observações Importantes
+
+Antes de utilizar, tenha em mente:
+
+1.  **Dependência de Encoding:** A interpretação dos caracteres está atrelada ao encoding configurado no seu ambiente (SO/Compilador).
+2.  **Foco em Texto:** Esta biblioteca não foi desenhada para micro-otimizações de performance de hardware, mas sim para a clareza e robustez no processo de conversão **texto $\leftrightarrow$ texto**.
+
+---
+
+## 🚀 Como Usar
+
+*Exemplo básico de implementação:*
+
+```c
+#include "bintext.h"
+#include <stdio.h>
+
+int main() {
+    // Exemplo de uso do bin_encode
+    // Seu código aqui...
+    return 0;
+}
