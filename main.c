@@ -45,7 +45,7 @@ void start_menu() {
     } while (1);
 }
 
-//menu de opcoes de funcionabilidades
+//menu de opcoes de funcionalidades
 void function_menu() {
     int option;
 
@@ -113,17 +113,33 @@ void binary_to_text_menu() {
 
 //binario para decimal
 void bin_decode_menu() {
-    long long binary;
+    char buf[64];
+    long long binary = 0;
     int decimal;
 
     printf("\nEnter an 8-bit binary number as digits (only 0/1).\n");
     printf("Binary: ");
-    if (scanf("%lld", &binary) != 1) {
-        clear_buffer();
+
+    if (!fgets(buf, sizeof(buf), stdin)) {
         printf("Invalid input!\n");
         return;
     }
-    clear_buffer();
+    buf[strcspn(buf, "\n")] = '\0';
+
+    // valida e monta o long long
+    size_t n = strlen(buf);
+    if (n == 0 || n > 8) {
+        printf("Invalid input! (enter 1 to 8 bits)\n");
+        return;
+    }
+
+    for (size_t i = 0; i < n; i++) {
+        if (buf[i] != '0' && buf[i] != '1') {
+            printf("Invalid input! (only 0/1)\n");
+            return;
+        }
+        binary = binary * 10 + (buf[i] - '0');
+    }
 
     decimal = bin_decode(binary);
     printf("\nDecimal value: %d\n", decimal);
