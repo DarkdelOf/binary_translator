@@ -44,14 +44,20 @@ Antes de utilizar, tenha em mente:
 
 ## 🚀 Como Usar
 
-*Exemplo básico de implementação:*
+*Como implementar e exemplo básico de uso:*
 
+### 1. Clonar
+```py
+git clone https://github.com/DarkdelOf/binary_translator.git
+cd binary_translator
+```
+### 2. Rodar
 ```c
-#include "bintext.h"
+
 #include <stdio.h>
+#include "bintext.h"
 
 int main() {
-    // Exemplo de uso do bin_encode
-    // Seu código aqui...
+    // Seu código...
     return 0;
 }
