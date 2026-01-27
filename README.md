@@ -51,13 +51,21 @@ Antes de utilizar, tenha em mente:
 git clone https://github.com/DarkdelOf/binary_translator.git
 cd binary_translator
 ```
-### 2. Rodar
+### 2. Exemplo de uso
 ```c
 
 #include <stdio.h>
 #include "bintext.h"
 
 int main() {
-    // Seu código...
+    char bin[BINTEXT_MAX_OUTPUT+1];
+    char text[BINTEXT_MAX_INPUT+1];
+
+    bin_encode("Oi mundo!", bin);
+    printf("Bin: %s\n", bin); // 01001111 01101001 00100000 01101101 01110101 01101110 01100100 01101111 00100001
+
+    bin_to_text(bin, text);
+    printf("Text: %s\n", text); // Oi mundo!
+
     return 0;
 }
