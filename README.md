@@ -14,6 +14,11 @@ A `bintext` é uma ferramenta focada na manipulação de strings para tradução
 [![vvvvvdal](https://img.shields.io/badge/GitHub-vvvvvdal-181717?style=for-the-badge&logo=github)](https://github.com/vvvvvdal)
 [![plusfrapp](https://img.shields.io/badge/GitHub-plusfrapp-181717?style=for-the-badge&logo=github)](https://github.com/plusfrapp)
 
+## 🎥 Vídeo de apresentação
+
+[![bintext](https://img.youtube.com/vi/8F9JwD2jKjs/0.jpg)](https://www.youtube.com/watch?v=8F9JwD2jKjs)
+
+
 ## 📋 Funcionalidades
 
 A biblioteca oferece três funções principais para manipulação de dados:
